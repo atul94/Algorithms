@@ -16,14 +16,14 @@ vector<int> Solution::inorderTraversal(TreeNode* A) {
     st.push_back(A);
     A = A->left;
     while(A != NULL || st.size() > 0){
-        if(A != NULL){
-            cout << "A->val = " << A->val << " A->left = " << A->left->val << " A->right = " << A->right->val << endl;
-        }
+        //if(A != NULL){
+          //  cout << "A->val = " << A->val << endl;
+        //}
         if(A != NULL){
             st.push_back(A);
             A = A->left;
         }
-        if(st.size() > 0){
+        else if(st.size() > 0){
             TreeNode * temp;
             temp = st.back();
             st.pop_back();
